@@ -115,7 +115,7 @@ const Navbar = ({ activePage, setActivePage }: { activePage: string, setActivePa
 const Hero = ({ onAction }: { onAction: () => void }) => (
   <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="grid md:grid-template-columns-2 lg:grid-cols-2 gap-12 items-center">
+      <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -458,7 +458,7 @@ const Contact = () => {
                 </div>
                 <div className="space-y-2 sm:col-span-2">
                   <label className="text-sm font-bold text-slate-700 uppercase tracking-tighter">Message</label>
-                  <textarea rows={4} placeholder="How can we help you?" className="w-full px-5 py-4 bg-slate-50 rounded-xl border border-slate-200 focus:border-accent focus:ring-0 transition-all outline-none resize-none"></textarea>
+                  <textarea rows={4} placeholder="How can we help you?" className="w-full px-5 py-4 bg-slate-50 rounded-xl border border-slate-200 focus:border-accent focus:ring-0 transition-all outline-none" />
                 </div>
                 <div className="sm:col-span-2">
                   <button className="w-full bg-primary text-white py-4 rounded-xl font-bold hover:bg-slate-700 transition-all shadow-lg hover:shadow-xl active:scale-[0.98]">
@@ -589,7 +589,7 @@ export default function App() {
               <section className="py-24 bg-primary text-white">
                 <div className="max-w-7xl mx-auto px-4 text-center">
                   <h2 className="text-3xl font-display font-bold mb-8 text-white">Don't see what you need?</h2>
-                  <p className="text-xl mb-12 opacity-80 max-w-3xl mx-auto">We offer custom consulting and specialized tax planning for unique financial situations. Contact us for a personalized quote.</p>
+                  <p className="text-xl mb-12 opacity-80 max-w-3xl mx-auto">We offer custom consulting and specialized tax planning for unique financial situations. Contact us for a personalized consultation.</p>
                   <button 
                     onClick={() => setActivePage('Contact')}
                     className="bg-white text-primary px-10 py-4 rounded-xl font-bold hover:bg-slate-100 transition-all inline-flex items-center gap-2"
@@ -659,7 +659,7 @@ export default function App() {
                    <h3 className="text-3xl font-display font-bold mb-8 text-center">Frequently asked questions</h3>
                    <div className="space-y-6">
                       {[
-                        { q: "What documents do I need for my tax appointment?", a: "Generally, you'll need W-2s, 1099s, mortgage interest statements, property tax records, and any documentation for deductions or credits you plan to claim." },
+                        { q: "What documents do I need for my tax appointment?", a: "Generally, you'll need W-2s, 1099s, mortgage interest statements, property tax records, and any documentation related to investments or business income." },
                         { q: "When is the filing deadline for 2024?", a: "The standard deadline is April 15, 2025. Corporate deadlines may vary based on your entity type (e.g., S-Corps are typically March 15)." },
                         { q: "How long should I keep old tax returns?", a: "The IRS recommends keeping records for 3 years, but for certain situations (like real estate or stock records), 6-7 years is safer." }
                       ].map((item, i) => (
